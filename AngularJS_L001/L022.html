@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="Scripts/angular.js"></script>
+</head>
+<body>
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+
+        原样姓名:{{msg}}
+        <p></p>
+        过滤后姓名:{{ msg | reverse }}
+
+        <p>过滤格式</p>
+        <br />{{ "lower cap string" | uppercase }}   // 结果：LOWER CAP STRING
+        <br />{{ "TANK is GOOD" | lowercase }}      // 结果：tank is good
+        <br />{{1490161945000 | date:"yyyy-MM-dd HH:mm:ss"}} // 2017-03-22 13:52:25
+        <br />{{149016.1945000 | number:2}}//number 格式化（保留小数）
+        <br />{{ 250 | currency }}            // 结果：$250.00 currency货币格式化
+        <br />{{ 250 | currency:"RMB ￥ " }}  // 结果：RMB ￥ 250.00 currency货币格式化
+        <br />
+        <p>filter查找</p>
+        // 查找name为iphone的行
+        {{ [{"age": 20,"id": 10,"name": "iphone"},{"age": 12,"id": 11,"name": "sunm xing"},{"age": 44,"id": 12,"name": "test abc"}] | filter:{'name':'iphone'} }}
+        <p>limitTo 截取</p>
+        <br />{{"1234567890" | limitTo :6}} // 从前面开始截取6位
+        <br />{{"1234567890" | limitTo:-4}} // 从后面开始截取4位
+        <p>orderBy 排序</p>
+        <p>根id降序排</p>
+        {{ [{"age": 20,"id": 10,"name": "iphone"},{"age": 12,"id": 11,"name": "sunm xing"},{"age": 44,"id": 12,"name": "test abc"}] | orderBy:'id':true}}
+        <p>根据id升序排</p>
+        {{ [{"age": 20,"id": 10,"name": "iphone"},{"age": 12,"id": 11,"name": "sunm xing"},{"age": 44,"id": 12,"name": "test abc"}] | orderBy:'id' }}
+
+    </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope) {
+            $scope.msg = "Runoob";
+        });
+        app.filter('reverse', function () { //可以注入依赖
+            return function (text) {
+                return text.split("").reverse().join("");
+            }
+        });
+    </script>
+</body>
+</html>

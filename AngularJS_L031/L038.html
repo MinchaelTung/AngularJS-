@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>AngularJS 包含</title>
+    <script type="text/javascript" src="Scripts/angular.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="sitesCtrl">
+    <div ng-include="'runoob.htm'"></div>
+    <div ng-include="'sites.htm'"></div>
+
+    <script type="text/javascript">
+        var app = angular.module('myApp', []);
+        app.controller('sitesCtrl', function ($scope) {``
+            $scope.names = [
+                { Name: "百度", Url: "www.baidu.com" }
+                , { Name: "谷歌", Url: "www.google.cn" }
+                , { Name: "菜鸟", Url: "www.runoob.com" }
+            ];
+
+        });
+    </script>
+</body>
+</html>

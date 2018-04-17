@@ -1,0 +1,35 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>根作用域</title>
+    <script type="text/javascript" src="Scripts/angular.js"></script>
+</head>
+<body>
+    <div ng-app="myApp">
+        <div ng-controller="myCtrl">
+            <h1>姓氏{{lastname}}家族成员：</h1>
+            <ul>
+                <li ng-repeat="x in names">{{x}}-{{lastname}}</li>
+            </ul>
+        </div>
+        <div ng-controller="myCtrl_1">
+            <div>scope中的值是{{lastname_1}}</div>
+            <div>rootscope中的值是{{$root.lastname}}</div>
+        </div>
+        <script type="text/javascript">
+            var app = angular.module("myApp", []);
+            app.controller("myCtrl", function ($scope, $rootScope) {
+                $scope.names = ["Emil", "Tobias", "Linus"];
+                $rootScope.lastname = "Refsnes";
+
+            });
+            app.controller('myCtrl_1', function ($scope, $rootScope) {
+                $scope.lastname_1 = $rootScope.lastname;
+            });
+        </script>
+        <p>注意 $rootScope 在循环对象内外都可以访问。</p>
+    </div>
+</body>
+</html>

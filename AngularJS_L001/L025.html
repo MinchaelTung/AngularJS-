@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>AngularJS XMLHttpRequest</title>
+    <script type="text/javascript" src="Scripts/angular.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="siteCtrl">
+        <ul>
+            <li ng-repeat="x in names">
+                {{x.Name + ","+x.Country}}
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        var app = angular.module("myApp", []);
+        //注意的是不能跨域访问 ajax 安全设定
+        app.controller('siteCtrl', function ($scope, $http) {
+            $http({
+                method: 'GET',
+                url: '/data/sites.json'
+            }).then(function successCallback(response) {
+                $scope.names = response.data.sites;
+            }, function errorCallback(response) {
+                // 请求失败执行代码
+                alert("请求失败");
+            });
+
+        });
+        //1.5以上版本可以这样设置
+        //$http.get('/someUrl', config).then(successCallback, errorCallback);
+        //$http.post('/someUrl', data, config).then(successCallback, errorCallback);
+
+    </script>
+
+
+</body>
+</html>

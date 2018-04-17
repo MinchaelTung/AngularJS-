@@ -1,0 +1,34 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CSS 类</title>
+    <script type="text/javascript" src="Scripts/angular.js"></script>
+    <style>
+        input.ng-invalid { background-color: lightblue; }
+    </style>
+</head>
+<body>
+    <form ng-app="" name="myForm">
+        输入你的名字:
+        <input name="myName" ng-model="myText" required>
+    </form>
+
+    <p>编辑文本域，不同状态背景颜色会发送变化。</p>
+    <p>文本域添加了 required 属性，该值是必须的，如果为空则是不合法的。</p>
+    <br />
+    ng-model 指令根据表单域的状态添加/移除以下类：<br />
+    ng-empty<br />
+    ng-not-empty<br />
+    ng-valid: 验证通过<br />
+    ng-invalid: 验证失败<br />
+    ng-valid-[key]: 由$setValidity添加的所有验证通过的值<br />
+    ng-invalid-[key]: 由$setValidity添加的所有验证失败的值<br />
+    ng-pristine: 控件为初始状态<br />
+    ng-dirty: 控件输入值已变更<br />
+    ng-touched: 控件已失去焦点<br />
+    ng-untouched: 控件未失去焦点<br />
+    ng-pending: 任何为满足$asyncValidators的情况<br />
+</body>
+</html>

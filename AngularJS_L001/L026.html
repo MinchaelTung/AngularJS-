@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>AngularJS Select(选择框)</title>
+    <script type="text/javascript" src="Scripts/angular.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="myCtrl">
+        <p>ng-options 与 ng-repeat</p>
+        <p>
+            简单的选择器，写法1
+            <select ng-init="selectedName1=names[0]" ng-model="selectedName1" ng-options="x for x in names"></select>
+        </p>
+        <p>
+            简单的选择器，写法2
+            <select ng-init="selectedName2=names[1]" ng-model="selectedName2">
+                <option ng-repeat="x in names">{{x}}</option>
+            </select>
+        </p>
+
+    </div>
+
+    <div ng-controller="mySites">
+        <p>
+            选中一个值事例
+            <select ng-model="selectedSite">
+                <option ng-repeat="x in sites" value="{{x.url}}">{{x.site}}</option>
+            </select>
+        </p>
+        <h1>你选择的是: {{selectedSite}}</h1>
+        <p>用法2</p>
+        <select ng-model="selectedSite22" ng-options="x.site for x in sites"></select>
+        <p></p>
+        <h1>你选择的是: {{selectedSite22.site}}</h1>
+        <p>网址为: {{selectedSite22.url}}</p>
+    </div>
+
+
+    <div ng-controller="DemoOne">
+        <h1>实例1</h1>
+        <p>使用对象作为数据源, x 为键(key), y 为值(value):</p>
+        <p>选择的网站是: 
+        <select ng-model="selectedSite" ng-options="x for (x,y) in sites">
+
+        </select>
+        </p>
+        <p>你选着的值是:{{selectedSite}}</p>
+        <br />
+        <br />
+        <p>实例2</p>
+        <p><select ng-model="selectedCar" ng-options="y.brand for (x,y) in cars"></select></p>
+        <p>选中值：{{selectedCar}}</p>
+        <p>选中值：{{selectedCar.brand}}</p>
+        <p>选中值：{{selectedCar.model}}</p>
+        <p>选中值：{{selectedCar.color}}</p>
+    </div>
+
+
+    <script type="text/javascript">
+
+        var app = angular.module("myApp", []);
+        app.controller("myCtrl", function ($scope) {
+            $scope.names = ["A", "B", "C"];
+        });
+        app.controller("mySites", function ($scope) {
+            $scope.sites = [
+                { site: "Google", url: "http://www.google.com" },
+                { site: "Runoob", url: "http://www.runoob.com" },
+                { site: "Taobao", url: "http://www.taobao.com" }
+            ];
+        });
+        app.controller("DemoOne", function ($scope) {
+            $scope.sites = {
+                site01: "Google",
+                site02: "Runoob",
+                site03: "Taobao"
+            };
+
+            $scope.cars = {
+                car01: { brand: "Ford", model: "Mustang", color: "red" },
+                car02: { brand: "Fiat", model: "500", color: "white" },
+                car03: { brand: "Volvo", model: "XC90", color: "black" }
+            };
+            $scope.selectedCar = $scope.cars.car02;  //设置第2个为初始值；
+        });
+
+    </script>
+
+</body>
+</html>

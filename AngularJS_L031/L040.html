@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>AngularJS CSS动画</title>
+    <script type="text/javascript" src="Scripts/angular.js"></script>
+    <!-- 动画的JS -->
+    <script type="text/javascript" src="Scripts/angular-animate.js"></script>
+    <style>
+        @keyframes myChange {
+            from { height: 100px; }
+            to { height: 0; }
+        }
+
+        div { height: 100px; background-color: lightblue; }
+
+            div.ng-hide { animation: 0.5s myChange; }
+    </style>
+</head>
+<body ng-app="myApp">
+    隐藏 DIV: <input type="checkbox" ng-model="myCheck">
+
+    <div ng-hide="myCheck">
+    </div>
+    <script>
+         //把 ngAnimate 直接添加在模型中
+         var app = angular.module('myApp', ['ngAnimate']);
+    </script>
+</body>
+</html>

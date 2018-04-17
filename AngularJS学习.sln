@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJS_L001", "AngularJS_L001\AngularJS_L001.csproj", "{02EE5F04-FDA9-495D-9A72-37A1BB71734E}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AngularJS_L031", "AngularJS_L031\", "{1F33DC81-974F-4D22-B050-ECDD00586B7E}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_3939"
+		Debug.AspNetCompiler.PhysicalPath = "AngularJS_L031\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3939\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_3939"
+		Release.AspNetCompiler.PhysicalPath = "AngularJS_L031\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3939\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "3939"
+		SlnRelativePath = "AngularJS_L031\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02EE5F04-FDA9-495D-9A72-37A1BB71734E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02EE5F04-FDA9-495D-9A72-37A1BB71734E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02EE5F04-FDA9-495D-9A72-37A1BB71734E}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{02EE5F04-FDA9-495D-9A72-37A1BB71734E}.Debug|ARM.Build.0 = Debug|Any CPU
+		{02EE5F04-FDA9-495D-9A72-37A1BB71734E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{02EE5F04-FDA9-495D-9A72-37A1BB71734E}.Debug|x64.Build.0 = Debug|Any CPU
+		{02EE5F04-FDA9-495D-9A72-37A1BB71734E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{02EE5F04-FDA9-495D-9A72-37A1BB71734E}.Debug|x86.Build.0 = Debug|Any CPU
+		{02EE5F04-FDA9-495D-9A72-37A1BB71734E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02EE5F04-FDA9-495D-9A72-37A1BB71734E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02EE5F04-FDA9-495D-9A72-37A1BB71734E}.Release|ARM.ActiveCfg = Release|Any CPU
+		{02EE5F04-FDA9-495D-9A72-37A1BB71734E}.Release|ARM.Build.0 = Release|Any CPU
+		{02EE5F04-FDA9-495D-9A72-37A1BB71734E}.Release|x64.ActiveCfg = Release|Any CPU
+		{02EE5F04-FDA9-495D-9A72-37A1BB71734E}.Release|x64.Build.0 = Release|Any CPU
+		{02EE5F04-FDA9-495D-9A72-37A1BB71734E}.Release|x86.ActiveCfg = Release|Any CPU
+		{02EE5F04-FDA9-495D-9A72-37A1BB71734E}.Release|x86.Build.0 = Release|Any CPU
+		{1F33DC81-974F-4D22-B050-ECDD00586B7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F33DC81-974F-4D22-B050-ECDD00586B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F33DC81-974F-4D22-B050-ECDD00586B7E}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{1F33DC81-974F-4D22-B050-ECDD00586B7E}.Debug|ARM.Build.0 = Debug|Any CPU
+		{1F33DC81-974F-4D22-B050-ECDD00586B7E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1F33DC81-974F-4D22-B050-ECDD00586B7E}.Debug|x64.Build.0 = Debug|Any CPU
+		{1F33DC81-974F-4D22-B050-ECDD00586B7E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1F33DC81-974F-4D22-B050-ECDD00586B7E}.Debug|x86.Build.0 = Debug|Any CPU
+		{1F33DC81-974F-4D22-B050-ECDD00586B7E}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F33DC81-974F-4D22-B050-ECDD00586B7E}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{1F33DC81-974F-4D22-B050-ECDD00586B7E}.Release|ARM.ActiveCfg = Debug|Any CPU
+		{1F33DC81-974F-4D22-B050-ECDD00586B7E}.Release|ARM.Build.0 = Debug|Any CPU
+		{1F33DC81-974F-4D22-B050-ECDD00586B7E}.Release|x64.ActiveCfg = Debug|Any CPU
+		{1F33DC81-974F-4D22-B050-ECDD00586B7E}.Release|x64.Build.0 = Debug|Any CPU
+		{1F33DC81-974F-4D22-B050-ECDD00586B7E}.Release|x86.ActiveCfg = Debug|Any CPU
+		{1F33DC81-974F-4D22-B050-ECDD00586B7E}.Release|x86.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

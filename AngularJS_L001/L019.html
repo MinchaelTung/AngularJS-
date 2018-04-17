@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>外部文件中的控制器</title>
+    <script type="text/javascript" src="Scripts/angular.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="namesCtrl">
+        <ul>
+            <li ng-repeat="x in names">
+                {{ x.name + ', ' + x.country }}
+            </li>
+        </ul>
+
+    </div>
+    <script type="text/javascript" src="personController.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>AngularJS 过滤器</title>
+    <script type="text/javascript" src="Scripts/angular.js"></script>
+</head>
+<body ng-app="myApp">
+    
+    <div  ng-controller="personCtrl">
+
+        <p>姓名为 {{ lastName | uppercase }}（大写uppercase）</p>
+        <p>姓名为 {{ lastName | lowercase }}（小写lowercase）</p>
+    </div>
+    <div  ng-controller="costCtrl">
+
+        <input type="number" ng-model="quantity">
+        <input type="number" ng-model="price">
+
+        <p>总价 = {{ (quantity * price) | currency }}  （格式化数字为货币格式 currency）</p>
+
+    </div>
+    <div ng-controller="namesCtrl">
+
+        <p>循环对象:</p>
+        <ul>
+            <li ng-repeat="x in names | orderBy:'country'">
+                {{ x.name + ', ' + x.country }}
+            </li>
+        </ul>
+
+    </div>
+
+    <script type="text/javascript" src="personController.js"></script>
+</body>
+</html>
